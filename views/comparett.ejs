@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <title>Compare Timetables</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body style="background-color:#74b8cc" ;>
+
+    <style type="text/css">
+        h1 {
+            font-size: 30px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: center;
+            margin: 90px 0px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+
+        .tbl-content {
+            overflow-x: auto;
+            margin-top: 0px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+
+        thead {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        th {
+            padding: 20px 15px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 12px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 15px;
+            text-align: left;
+            vertical-align: middle;
+            font-weight: 300;
+            font-size: 12px;
+            color: #fff;
+            border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+        }
+
+
+        /* demo styles */
+
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+        body {
+            background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+            background: linear-gradient(to right, #25c481, #25b7c4);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        section {
+            margin: 50px;
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+
+
+    <!-- <h5 class="info">
+        <strong>
+            Comparing timetables of
+            <% for(var i=0; i < namearrlen-1; i++) { %>  
+                <%= namearr[i] %>,
+           <% } %> 
+           and <%= namearr[i] %>
+        </strong>
+    </h5>  -->
+
+    <section>
+        <h1>
+            <strong>Comparing Time Tables</strong>
+            <br>
+            <% for(var i=0; i < namearrlen-1; i++) { %>
+            <%= namearr[i] %>,
+            <% } %>
+            and <%= namearr[i] %>
+        </h1>
+
+
+        <div class="tbl-content">
+
+            <table cellpadding="0" cellspacing="0" border="0">
+                <div class="tbl-header">
+                    <thead>
+                        <tr>
+                            <th>Days/<br>Time</th>
+                            <th>0800-0830</th>
+                            <th>0830-0900</th>
+                            <th>0900-0930</th>
+                            <th>0930-1000</th>
+                            <th>1000-1030</th>
+                            <th>1030-1100</th>
+                            <th>1100-1130</th>
+                            <th>1130-1200</th>
+                            <th>1200-1230</th>
+                            <th>1230-1300</th>
+                            <th>1400-1430</th>
+                            <th>1430-1500</th>
+                            <th>1500-1530</th>
+                            <th>1530-1600</th>
+                            <th>1600-1630</th>
+                            <th>1630-1700</th>
+                            <th>1700-1730</th>
+                            <th>1730-1800</th>
+                            <th>1800-1830</th>
+                            <th>1830-1900</th>
+                            <th>1900-1930</th>
+                            <th>1930-2000</th>
+                        </tr>
+                    </thead>
+                </div>
+                <tbody>
+                    <tr id="daysrow">
+                        <td><strong>Monday</strong></td>
+
+                        <% for(var i=0; i < 22; i++) { %>
+                        <td><%= Monday[i] %></td>
+                        <% } %>
+                    </tr>
+
+                    <tr id="daysrow">
+                        <td><strong>Tuesday</strong></td>
+
+                        <% for(var i=0; i < 22; i++) { %>
+                        <td><%= Tuesday[i] %></td>
+                        <% } %>
+                    </tr>
+
+                    <tr id="daysrow">
+                        <td><strong>Wednesday</strong></td>
+
+                        <% for(var i=0; i < 22; i++) { %>
+                        <td><%= Wednesday[i] %></td>
+                        <% } %>
+                    </tr>
+
+                    <tr id="daysrow">
+                        <td><strong>Thursday</strong></td>
+
+                        <% for(var i=0; i < 22; i++) { %>
+                        <td><%= Thursday[i] %></td>
+                        <% } %>
+                    </tr>
+
+                    <tr id="daysrow">
+                        <td><strong>Friday</strong></td>
+
+                        <% for(var i=0; i < 22; i++) { %>
+                        <td><%= Friday[i] %></td>
+                        <% } %>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>
