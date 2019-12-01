@@ -112,7 +112,7 @@
             outline: 0;
             border: 1px solid rgba(255, 255, 255, 0.4);
             background-color: rgba(255, 255, 255, 0.2);
-            width: 250px;
+            width: 300px;
             border-radius: 3px;
             padding: 10px 15px;
             margin: 0 auto 10px auto;
@@ -130,7 +130,6 @@
 
         .form1 input:focus {
             background-color: white;
-            width: 300px;
             color: #53e3a6;
         }
 
@@ -292,6 +291,21 @@
         input::-webkit-input-placeholder {
             color: #53e3a6;
         }
+
+        .click-here {
+            color: white;
+            padding: .5vh .5vw;
+            border: 1px solid white;
+            border-radius: 5px;
+            margin-right: .5vw;
+            padding-left: .6vw;
+        }
+
+        .click-here:hover {
+            text-decoration: none;
+            color: #53e3a6;
+            background: white;
+        }
     </style>
 
     <div class="wrapper">
@@ -310,7 +324,7 @@
 
                         <button type='submit' name='submit' id="uploadbtn">Upload</button>
 
-                        <h5 style="padding-top: 20px;"><a href="/compare">Click here </a>if you wish to compare free
+                        <h5 style="padding-top: 20px;"><a href="/compare" class="click-here">Click here </a>if you wish to compare free
                             slots</h5>
                     </form>
 
